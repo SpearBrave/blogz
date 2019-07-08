@@ -2,7 +2,7 @@ from flask import Flask, request, redirect, render_template
 import re
 
 
-app + Flask(__name__)
+app = Flask(__name__)
 
 app.config['DEBUG'] = True
 
