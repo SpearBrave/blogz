@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>New Blog Post !</h1>
+    <form method='post' action = "/new_post" >  <!-- only sends thru POST -->
+        <label>
+            <h1>Title</h1>
+        </label>
+            <input  type="text" name="Title"> </input>
+            <span class= "error">{{error}}</span>> <!--place holder error -->
+            <label><h3>body</h3> </label>
+            
+            <textarea name= "body"></textarea> <!-- textarea is a paragrah input  -->
+            <span class= "error">{{error}}</span>
+       
+        
+        <input type="submit" value='Submit form' />   <!-- Submits -->
+        
+        
+    </form>
+
+    <hr />
+
+    {% endblock %}

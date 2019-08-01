@@ -1,0 +1,13 @@
+{%extends "base.html" %}
+{% block content %}
+
+    <h1>{{blog.name}}</h1><!-- blog is a  place holder for a variable -->
+
+    <h3>
+        {{blog.body}}
+    </h3>
+
+    <h6>written by <a href=?user=userId></a>  {{blog.owner.username}} </h6>
+
+
+{% endblock %}

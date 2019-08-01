@@ -1,0 +1,31 @@
+% extends "base.html" %}
+
+{% block content %}
+
+        <title>Build a Blog</title>
+    
+
+    
+    <h1>Build a Blog</h1>
+       {% for blog in blogs  %}   <!-- for every blog do this --> <!-- switching to users from blogs -->
+          
+           
+         <h3> <a href= "/blog?id={{blog.id }}" > {{blog.name}}   </a> </h3>
+
+        <h2>{{blog.body}}</h2>
+
+
+        <h4>written by <a href=?user=userId></a>{{blog.owner.username}}</h4>
+                                <!-- blog. id that this belongs too-->
+          
+
+        {% endfor  %}
+
+    
+
+
+
+
+
+
+{% endblock %}
