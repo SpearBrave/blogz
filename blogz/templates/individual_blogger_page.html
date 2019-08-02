@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+        <title>{{user}}</title>
+    
+
+    
+    <h1>user</h1>
+
+    {% if blogs|length == 0 %}
+      <b>No posts for this user yet</b>
+
+    {% endif %}
+       {% for blog in blogs  %}   <!-- for every blog do this -->
+          
+           
+         <h3> <a href= "/blog?id={{blog.id }}" > {{blog.name}}   </a> </h3>
+                                <!-- blog. id that this belongs too-->
+          <p>{{blog.body}}</p> 
+
+        {% endfor  %}
+
+    
+
+
+
+
+
+
+{% endblock %}

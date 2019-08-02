@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+{% for post in blog  %}  
+    <h1>{{post.name}}</h1><!-- blog is a  place holder for a variable -->
+
+    <h3>
+        {{post.body}}
+    </h3>
+
+    <h6>written by <a href="/blog?user={{post.owner.id}}">{{post.owner.username}} </a> </h6>
+
+{% endfor %}
+
+    
+{% endblock %}
